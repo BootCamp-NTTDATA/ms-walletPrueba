@@ -1,6 +1,7 @@
 package com.bootcamp.wallet.controller;
 
 import com.bootcamp.wallet.dto.PaymentDto;
+import com.bootcamp.wallet.request.MovementRequest;
 import com.bootcamp.wallet.resource.PaymentResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -36,5 +37,10 @@ public class PaymentController {
     @DeleteMapping
     public Mono<Void> delete(@RequestBody PaymentDto paymentDto){
         return paymentResource.delete(paymentDto);
+    }
+
+    @PutMapping("/movement")
+    public Mono<PaymentDto> addMovement(@RequestBody MovementRequest movementRequest){
+        return paymentResource.addMovement(movementRequest);
     }
 }

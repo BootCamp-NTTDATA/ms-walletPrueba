@@ -3,13 +3,11 @@ package com.bootcamp.wallet.entity;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.math.BigDecimal;
+import java.util.List;
 
 @Getter
 @Setter
 public class Payment extends BaseEntity{
-    private BigDecimal amount;
-    private String paymentType;
-    private Client transmitterClient;
-    private Client receiverClient;
+    private String idRegisterWallet;
+    private List<Movement> movementList;
 }

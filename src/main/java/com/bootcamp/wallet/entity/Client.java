@@ -18,5 +18,5 @@ public class Client {
     private String name;
     private String phone;
     private String email;
-    private String IMEI;
+    private String imei;
 }
